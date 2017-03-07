@@ -19,6 +19,15 @@ int main(void) {
     return 1;
    }   
 
+   while(fgets(line , sizeof(line)/sizeof(line[0]) , read) != NULL){
+
+   	for(int i = 0; i < rows; i ++){
+      for(int j = 0; j <= cols; j++){
+      	fscanf(read , "%c" , &string[i][j]);
+      }
+  }
+
+   }
 
 }
 
