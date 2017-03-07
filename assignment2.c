@@ -24,6 +24,18 @@ int main(void) {
    	for(int i = 0; i < rows; i ++){
       for(int j = 0; j <= cols; j++){
       	fscanf(read , "%c" , &string[i][j]);
+
+      	 if(string[i][0]){
+          if(i < rows){
+          printf("|");
+        }
+        }
+        else if(string[i][cols]){
+          if(!string[rows][cols])
+          printf("|");
+        }
+              printf("%c" , string[i][j]);
+
       }
   }
 
