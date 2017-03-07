@@ -56,10 +56,12 @@ fscanf(read , "%s %s %s %s %s %d %d %d", c1 , c2 , c3 , c4 , c5 , &rows , &cols 
 
           printf("%c" , string[i][j]);
 
+          string[i][j] = '\0';
+
       }
   }
 
-   }
+   }printf("\n");
 
 }
 
