@@ -14,6 +14,7 @@ int main(void) {
  char string[20][20];
  char c1[10], c2[10], c3[10], c4[10], c5[10];
  int rows, cols, move;
+ char champ = '@', otherchamp = '%';
 
  read = fopen("infile.txt", "r");
 
@@ -49,7 +50,11 @@ fscanf(read , "%s %s %s %s %s %d %d %d", c1 , c2 , c3 , c4 , c5 , &rows , &cols 
           if(!string[rows][cols])
           printf("|");
         }
-              printf("%c" , string[i][j]);
+
+         if(string[i][j] == champ)
+          string[i][j] = otherchamp;
+
+          printf("%c" , string[i][j]);
 
       }
   }
