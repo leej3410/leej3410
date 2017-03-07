@@ -11,6 +11,10 @@ int main(void) {
    //char ch;
  char line[100];// need to give a right size
 
+ char string[20][20];
+ char c1[10], c2[10], c3[10], c4[10], c5[10];
+ int rows, cols, move;
+
  read = fopen("infile.txt", "r");
 
    if(read == NULL){
@@ -18,6 +22,8 @@ int main(void) {
     printf("FAIL");
     return 1;
    }   
+
+fscanf(read , "%s %s %s %s %s %d %d %d", c1 , c2 , c3 , c4 , c5 , &rows , &cols , &move);
 
    while(fgets(line , sizeof(line)/sizeof(line[0]) , read) != NULL){
 
